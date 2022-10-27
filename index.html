@@ -16,24 +16,28 @@
     // Part1
     // Create a variable called paraEl
     // Use JSX to create a paragraph element with text "React is Cool!"
-    const paraEl = <p>React is Cool!</p>;
-
+    const paraEl = <p>Hello React</p>; // was : React is Cool!
 
     // Part2
     // Create a variable called headLinkEl
     // Use JSX to create an h1 element tag with a link inside of it
     // Make the link point to https://reactjs.org/ and include the text "React"
     const headLinkEl = 
-    <h1>
+    <h1 class="entry-header">
       <a href="https://reactjs.org/">React</a>
     </h1>;
-    ReactDOM.render(paraEl,document.body);
 
     // Part 3
     // Create a component named "Header"
     // Have it return a header with an ID of "main" 
     // Include headLinkEl and paraEl inside of the header element
-
+    function Header() {
+      return <h1 id="main"> {headLinkEl} {paraEl}</h1>
+    }
+    ReactDOM.render(
+      <Header />,
+      document.body
+    );
     
     // Part 4
     // Create a component named "List"
