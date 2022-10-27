@@ -34,10 +34,6 @@
     function Header() {
       return <h1 id="main"> {headLinkEl} {paraEl}</h1>
     }
-    ReactDOM.render(
-      <Header />,
-      document.body
-    );
     
     // Part 4
     // Create a component named "List"
@@ -46,7 +42,25 @@
     // The first list item should be a link to the "React Docs" "https://reactjs.org/docs"
     // The second list item should be a link to the "ReactDOM Docs" overview "https://reactjs.org/docs/react-dom.html"
     // The third should be a link to a React related resource of your choice
-
+    function List() {
+      return (
+        <ul class="react-links" id="top">
+          <li>
+            <a href="https://reactjs.org/docs">React Docs</a>
+          </li>
+          <li> 
+            <a href="https://reactjs.org/docs/react-dom.html">ReactDOM Docs</a>
+          </li>
+          <li>
+            <a href="https://reactjs.org/docs/dom-elements.html">DOM Elements</a>
+          </li>
+        </ul>
+      );
+    }
+    ReactDOM.render(
+      <List />,
+      document.body
+    )
     
     // Part 5
     // Create a component named "App"
